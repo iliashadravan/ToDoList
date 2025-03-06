@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Http\Requests\AuthController;
+namespace App\Http\Requests\TaskController;
 
 use App\Http\Requests\Request;
 
-class RegisterRequest extends Request
+class storeRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -22,11 +22,8 @@ class RegisterRequest extends Request
     public function rules(): array
     {
         return [
-            'firstName' => 'required|string|max:255',
-            'lastName' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:4',
-
+            'title'       => 'required|min:3',
+            'description' => 'required|min:5',
         ];
     }
 }

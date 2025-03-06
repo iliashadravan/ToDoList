@@ -20,5 +20,9 @@ class User extends Model
         'birth_date'
 
     ];
+    public function Task()
+    {
+        return $this->hasMany(Task::class);
+    }
 
 }

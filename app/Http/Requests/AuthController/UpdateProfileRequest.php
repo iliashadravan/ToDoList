@@ -2,16 +2,16 @@
 
 namespace App\Http\Requests\AuthController;
 
-use Illuminate\Foundation\Http\FormRequest;
+use App\Http\Requests\Request;
 
-class UpdateProfileRequest extends FormRequest
+class UpdateProfileRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
      */
     public function authorize(): bool
     {
-        return false;
+        return true;
     }
 
     /**
